@@ -1,0 +1,28 @@
+première ligne d'un script: cherche l'interpréteur (#!)
+    * marche pas forcément sur windows
+
+option ajoutée lors de l'appel d'un script --> assez intéressant en scripting
+
+exemple:
+#!/usr/bin/python
+import sys
+
+if __name__='__main__':
+    if len(sys.argv)!= 3:
+        usage()
+    if sys.argv[1] == '__nb':
+        try:
+            nb = int(sys.argv[2])
+        except ValueError:
+            usage()
+        else:
+            print('nb')
+
+Avec la fonction usage définie ailleur:
+def usage():
+    print("Aide...")
+    sys.exit(-1)
+
+
+ ici le programme joue avec les arguments qui ont été ajoutée
+ après le nom du script (/monscript.py coucou toto titi)

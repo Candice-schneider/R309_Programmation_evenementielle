@@ -1,0 +1,7 @@
+statistique de temps --> module statistics
+
+fonction intéressante:
+statistics.mean(liste valeurs) --> valeur moyenne
+statistics.stdev(liste valeurs) --> écart type
+
+Dans les mesures de performances, ne pas mettre de print -> coûte du temps

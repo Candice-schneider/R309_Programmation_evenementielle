@@ -15,7 +15,7 @@ t1.start()
 
 t2 = threading.Thread(target=task, args=[2])
 t2.start()
-    """ Ici t1 et t2 démarre simultanément
+""" Ici t1 et t2 démarre simultanément
  Le temps est calculé après la fin des deux tâches"""
 t1.join()
 t2.join()
