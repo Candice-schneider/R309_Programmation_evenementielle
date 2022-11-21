@@ -1,0 +1,9 @@
+c'est toujours le client qui initialise la discussion (synchrone).
+Par la suite la discussion est asynchrone car les deux (client et serveur) peuvent
+communiquer comme ils veulent.
+
+Les arguments en lignes de commande sont interressant car on peut lancer le server et
+le client sur la même machine mais seulement avoir deux cmd différents.
+
+A chaque nouvelle connexion, il va être rediriger sur un autre port du serveur, ce qui
+fait que plusieurs clients peuvent se connecter en même temps.
