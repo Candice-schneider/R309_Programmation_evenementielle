@@ -39,7 +39,7 @@ class MainWindow(QMainWindow):
 
     def selectionchange(self):
         if self.choix.currentText() == "Kelvin en Celsius ":
-            try:
+            try:e
                 envoi = float(self.recup.text())
             except ValueError:
                 QMessageBox(text="Mauvaises valeures").exec()
