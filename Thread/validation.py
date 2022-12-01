@@ -25,24 +25,25 @@ def download_image(img_url):
 
 T = []
 
-def method1():  # threading
-   t1 = threading.Thread(target=download_image, args=[1])
-   t1.start()
 
-    t2 = threading.Thread(target=download_image, args=[2])
-    t2.start()
-
-def method2():  # pool thread
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        executor.map(download_image, img_urls)
+# threading
+"""t1 = threading.Thread(target=download_image, args=[1])
+t1.start()
+t2 = threading.Thread(target=download_image, args=[2])
+t2.start()"""
 
 
-def method3():  # multiprocessing
-    for i in range(100):
-        T.append(threading.Thread(target=download_image, args=[i]))
+# pool thread
+with concurrent.futures.ThreadPoolExecutor() as executor:
+    executor.map(download_image, img_urls)
 
-    for i in range(len(T)):
-        T[i].start()
 
-    for i in range(len(T)):
-        T[i].join()
+"""def method3():  # multiprocessing
+for i in range(100):
+    T.append(threading.Thread(target=download_image, args=[i]))
+
+for i in range(len(T)):
+    T[i].start()
+
+for i in range(len(T)):
+    T[i].join()"""
